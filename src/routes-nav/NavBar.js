@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import UserContext from "../UserContext";
 import "./Nav.css";
+import Logo from "./QRBoxer.jpg";
 
 function NavBar({ logout }) {
   const { currentUser } = useContext(UserContext);
@@ -34,7 +35,7 @@ function NavBar({ logout }) {
   return (
     <nav className="Nav">
       <Link to="/">
-        <img width="95" src={require('./QRBoxer.jpg')} alt="logo" />
+        <img width="95" src={Logo} alt="logo" />
       </Link>
       {currentUser ? loggedIn() : loggedOut()}
     </nav>
