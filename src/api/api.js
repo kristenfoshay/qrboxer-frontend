@@ -1,9 +1,8 @@
 import axios from "axios";
 
-require('dotenv').config();
+// const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
-
+const BASE_URL = "https://qrboxer.herokuapp.com";
 
 class QRBoxerApi {
 
