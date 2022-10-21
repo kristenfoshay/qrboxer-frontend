@@ -16,7 +16,7 @@ function BoxesList({ id, location, date }) {
     getMoveBoxes();
   }, [id]);
 
-  if (!boxes) return <p> {id} </p>;
+  if (!boxes) return;
 
   return (
     <div className="BoxCardList">

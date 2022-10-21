@@ -6,6 +6,7 @@ import UserContext from "../UserContext";
 import Button from "react-bootstrap/Button";
 import QRBoxerApi from "../api/api";
 import Alert from "../common/Alert";
+import "./profileform.css";
 
 
 function ProfileForm() {
@@ -28,8 +29,6 @@ function ProfileForm() {
     evt.preventDefault();
 
     let profileData = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
       email: formData.email,
       password: formData.password,
     };
@@ -72,7 +71,7 @@ function ProfileForm() {
 
         <Form.Group className="ml-3">
           <Form.Label >Username</Form.Label>
-          <p class="form-control-plaintext">{currentUser.username}</p>
+          <p class="username">{currentUser.username}</p>
 
         </Form.Group>
 

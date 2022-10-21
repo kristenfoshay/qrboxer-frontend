@@ -1,0 +1,9 @@
+.username {
+    font-family: lobster;
+    font-size: xx-large;
+    color: blueviolet;
+}
+
+body {
+    background-image: url("./tile_background.png");
+}
