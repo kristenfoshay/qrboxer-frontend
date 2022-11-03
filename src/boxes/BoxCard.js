@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import "./BoxCard.css";
 import QRCode from "./QRCode";
 
-function BoxCard({ id, room, move, location, date }) {
+function BoxCard({ id, room, location, date }) {
   console.debug("BoxCard");
+  console.log(typeof(id), id);
+  console.log(typeof(room), room);
 
   return (
     <Link className="BoxCard card" to={`/boxes/${id}`}>

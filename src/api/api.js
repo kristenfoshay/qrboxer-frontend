@@ -9,6 +9,7 @@ class QRBoxerApi {
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
+    console.log("line 12, api", Object.entries(data));
     console.debug("API Call:", endpoint, data, method);
 
     const url = `${BASE_URL}/${endpoint}`;
@@ -21,6 +22,13 @@ class QRBoxerApi {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
       console.error("API Error:", err.response);
+      console.log(data);
+      console.log(typeof(data));
+      console.log(err.request);
+      console.log(err);
+      console.log(err.response);
+      console.log(err.response.status);
+      console.log(err.response.headers);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -62,8 +70,8 @@ class QRBoxerApi {
   }
 
   static async getBoxesbyMove(id) {
-    let res = await this.request(`moves/${id}/boxes`, id);
-    return res.boxes;
+    let res = await this.request(`moves/${id}/boxes`, id, "get");
+    return res;
   }
 
   static async getItem(id) {

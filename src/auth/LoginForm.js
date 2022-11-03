@@ -36,7 +36,7 @@ function LoginForm({ login }) {
     event.preventDefault();
     let result = await login(formData);
     console.log(result);
-    setFormData(INITIAL_STATE)
+    setFormData(INITIAL_STATE);
     if (result.success) {
       history.push('/');
     } else {

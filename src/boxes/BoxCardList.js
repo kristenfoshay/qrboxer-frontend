@@ -3,8 +3,9 @@ import BoxCard from "./BoxCard";
 import QRBoxerApi from "../api/api";
 
 function BoxCardList({ id, location, date }) {
+  console.log("line 6 boxcardlist", typeof(id));
 
-  const [boxes, setBoxes] = useState(null);
+  let [boxes, setBoxes] = useState(null);
 
   useEffect(() => {
     async function getMoveBoxes() {
@@ -17,6 +18,12 @@ function BoxCardList({ id, location, date }) {
   }, [id]);
 
   if (!boxes) return;
+
+  let contain = boxes;
+    
+    boxes = contain.boxes;
+    
+
 
   return (
     <div className="BoxCardList">

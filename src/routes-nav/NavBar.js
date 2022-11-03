@@ -7,7 +7,7 @@ import Logo from "./QRBoxer.jpg";
 function NavBar({ logout }) {
   const { currentUser } = useContext(UserContext);
  
-  console.log(currentUser);
+  console.log("line 10 NavBar", currentUser);
  
 
   function loggedOut(){

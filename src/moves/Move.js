@@ -6,7 +6,7 @@ import CreateaBox from "../boxes/CreateaBox";
 
 
 function Move({ createbox }) {
-  const { id } = useParams();
+  let { id } = useParams();
   const [move, setMove] = useState(null);
 
   useEffect(() => {
@@ -19,14 +19,16 @@ function Move({ createbox }) {
     getMoveBoxes();
   }, [id]);
 
-  if (!move) return <p> {id} </p>;
+  if (!move) return;
+
+  id = Object(id);
 
   return (
     <div className="Move col-md-8 offset-md-2">
       <h4>Destination: {move.location}</h4>
       <p>Move Date: {move.date}</p>
-      <CreateaBox move={move.id} createbox={createbox} />
-      <BoxCardList id={move.id} location={move.location} date={move.date} />
+      <CreateaBox move={id} createbox={createbox} />
+      <BoxCardList id={id} location={move.location} date={move.date} />
     </div>
   );
 }

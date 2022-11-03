@@ -8,6 +8,8 @@ function Boxes() {
 
     let moves = currentUser.moves;
 
+    console.log("line 11", moves);
+
     return (
         <div className="Moves col-md-8 offset-md-2">
             <h1> My Boxes </h1>
@@ -15,7 +17,7 @@ function Boxes() {
                 ? (
                     <div className="Moves-list" style={{ height: 2000 }} >
                         {moves.map(m => (
-                            <BoxesList id={m.id} location={m.location} date={m.date} />
+                            <BoxesList id={Object(m.id)} location={m.location} date={m.date} />
                         ))}
                     </div>
                 ) : (

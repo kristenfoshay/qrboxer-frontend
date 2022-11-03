@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import QRBoxerApi from "../api/api";
+//import QRBoxerApi from "../api/api";
 
 
 function CreateanItem({ createitem, box }) {
+
+  console.log("line 10 createanitem", typeof(box));
 
   const history = useHistory();
   const INITIAL_STATE = {
@@ -14,23 +16,23 @@ function CreateanItem({ createitem, box }) {
     box: box
   }
 
-  let [boxes, setBoxes] = useState(null);
+  //let [boxes, setBoxes] = useState(null);
 
   const [formData, setFormData] = useState(INITIAL_STATE);
 
   const [formErrors, setFormErrors] = useState([]);
 
-  useEffect(() => {
-    async function getBoxesItems() {
+  // useEffect(() => {
+  //   async function getBoxesItems() {
 
-      let boxes = await QRBoxerApi.getBoxes();
-      console.log(boxes);
-      setBoxes(boxes);
-    }
-    getBoxesItems();
-  }, []);
+  //     let boxes = await QRBoxerApi.getBoxes();
+  //     console.log(boxes);
+  //     setBoxes(boxes);
+  //   }
+  //   getBoxesItems();
+  // }, []);
 
-  if (!boxes) return <p> No Boxes yet! </p>;
+  // if (!boxes) return <p> No Boxes yet! </p>;
 
   console.debug(
     "CreateItemForm",
@@ -39,15 +41,20 @@ function CreateanItem({ createitem, box }) {
     "formErrors=", formErrors,
   );
 
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setFormData(data => ({ ...data, [name]: value }));
-  }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(formData => ({
+      ...formData,
+      [name]: value
+    }))
+  };
 
   async function handleSubmit(event) {
 
     event.preventDefault();
     let result = await createitem(formData);
+    console.log(result);
+    setFormData(INITIAL_STATE);
 
     if (result.success) {
       history.push("/");
