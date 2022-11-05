@@ -8,8 +8,6 @@ function Boxes() {
 
     let moves = currentUser.moves;
 
-    console.log("line 11", moves);
-
     return (
         <div className="Moves col-md-8 offset-md-2">
             <h1> My Boxes </h1>

@@ -4,7 +4,7 @@ import ItemListBoxes from "../boxes/ItemListBoxes";
 
 function BoxesListItems({ id }) {
 
-  const [boxes, setBoxes] = useState(null);
+  let [boxes, setBoxes] = useState(null);
 
   useEffect(() => {
     async function getMoveBoxes() {
@@ -18,11 +18,13 @@ function BoxesListItems({ id }) {
 
   if (!boxes) return;
 
+boxes = boxes.boxes;
+
   return (
     <div className="BoxCardList">
       {boxes.map(box => (
         <ItemListBoxes
-          box={box.id}
+          id={Object(box.id)}
         />
       ))}
     </div>

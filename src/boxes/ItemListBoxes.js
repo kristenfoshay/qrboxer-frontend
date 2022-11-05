@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import QRBoxerApi from "../api/api";
 import ItemCard from "../items/ItemCard";
 
-function ItemListBoxes({ box }) {
-
+function ItemListBoxes({ id }) {
+console.log("line 6", id);
   const [items, setItems] = useState(null);
 
   useEffect(() => {
     async function acquireItems() {
-      let items = await QRBoxerApi.getItemsbyBox(box);
+      let items = await QRBoxerApi.getItemsbyBox(id);
       setItems(items);
     }
 
     acquireItems();
-  }, [box]);
+  }, [id]);
 
   if (!items) return <p> No items in this box! </p>;
 

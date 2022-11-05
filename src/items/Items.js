@@ -15,7 +15,7 @@ function Items() {
                 ? (
                     <div className="Moves-list" style={{ height: 2000 }} >
                         {moves.map(m => (
-                            <BoxesListItems id={m.id} location={m.location} date={m.date} />
+                            <BoxesListItems id={Object(m.id)} location={m.location} date={m.date} />
                         ))}
                     </div>
                 ) : (

@@ -3,8 +3,6 @@ import BoxCard from "./BoxCard";
 import QRBoxerApi from "../api/api";
 
 function BoxesList({ id, location, date }) {
- 
-  console.log("boxeslist, line 6", typeof(id));
 
   let [boxes, setBoxes] = useState(null);
 

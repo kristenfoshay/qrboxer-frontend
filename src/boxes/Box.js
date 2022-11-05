@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import QRBoxerApi from "../api/api";
-//import ItemListBoxes from "../boxes/ItemListBoxes";
+import ItemListBoxes from "../boxes/ItemListBoxes";
 //import CreateanItem from "../items/CreateanItem";
 import Button from "react-bootstrap/Button";
 import RemoveaBox from "../boxes/RemoveaBox.js";
@@ -42,7 +43,9 @@ function Box({ createitem, removebox }) {
   }, [id]);
 
   if (!box) return <p> Loading ... </p>;
-  console.log(typeof(id));
+ 
+  id = Object(id);
+  console.log("line 48", typeof(id));
 
   console.log( "line 44 box", typeof(box.id));
 
@@ -76,7 +79,6 @@ function Box({ createitem, removebox }) {
       <Link to={`/boxes/${id}/print`}>
         <Button block="true" size="md" type="submit">Print Box Label</Button>
       </Link>
-      <br></br>
       <br></br>
       <Form className="Login" onSubmit={handleSubmit}>
         <Form.Label>Create a new Item</Form.Label>
@@ -118,7 +120,11 @@ function Box({ createitem, removebox }) {
           Submit
         </Button>
       </Form>
-
+<br></br>
+<h1>Items in this box</h1>
+<br></br>
+<br></br>
+<ItemListBoxes id={id}/>
     </div>
   );
 }

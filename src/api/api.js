@@ -10,6 +10,7 @@ class QRBoxerApi {
 
   static async request(endpoint, data = {}, method = "get") {
     console.log("line 12, api", Object.entries(data));
+    
     console.debug("API Call:", endpoint, data, method);
 
     const url = `${BASE_URL}/${endpoint}`;
@@ -65,7 +66,8 @@ class QRBoxerApi {
   }
 
   static async getItemsbyBox(id) {
-    let res = await this.request(`boxes/${id}/items`, id);
+    
+    let res = await this.request(`boxes/${id}/items`, id, "get");
     return res.items;
   }
 
