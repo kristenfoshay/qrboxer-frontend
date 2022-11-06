@@ -81,7 +81,7 @@ function Box({ createitem, removebox }) {
       </Link>
       <br></br>
       <Form className="Login" onSubmit={handleSubmit}>
-        <Form.Label>Create a new Item</Form.Label>
+        <Form.Label>Create a new Item for this Box</Form.Label>
         <br></br>
         <Form.Group size="md" controlId="description">
           <Form.Label>Description</Form.Label>

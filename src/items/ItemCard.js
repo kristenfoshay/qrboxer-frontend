@@ -10,13 +10,18 @@ function ItemCard({ id, description, image, box }) {
   return (
     <Link className="ItemCard card" to={`/items/${id}`}>
 
-      <div style={{ height: 'fit-content', width: 650, padding: '1rem', float: 'left' }}>
+      <div style={{ 
+    maxHeight: '400px', maxWidth: '300px', padding: '1rem', marginLeft: '1rem', marginRight: '1rem', float: 'left' }}>
         <h6 className="card-description">{description}</h6>
         <div style={{
           height: 200, width: 200, margin: 'auto',
           backgroundImage: `url(${image})`,
           backgroundSize: '100% 100%',
-          objectFit: 'fill'
+          objectFit: 'fill',
+          display: 'inline-block',
+          position: 'relative',
+          borderRadius: '6px 6px 6px 6px'
+
 
         }}></div>
 

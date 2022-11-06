@@ -11,6 +11,7 @@ function Boxes() {
     return (
         <div className="Moves col-md-8 offset-md-2">
             <h1> My Boxes </h1>
+            <br></br>
             {moves.length
                 ? (
                     <div className="Moves-list" style={{ height: 2000 }} >

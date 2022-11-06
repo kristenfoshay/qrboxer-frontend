@@ -54,7 +54,7 @@ function Routes({ login, signup, createmove, createbox, createitem, removebox, r
         </Route>
 
         <Route exact path="/boxes/:id">
-          <Box createitem={createitem} removebox={removebox} />
+          <Box createitem={createitem} removebox={removebox} removeitem={removeitem} />
         </Route>
 
         <Route exact path="/boxes/:id/print">
