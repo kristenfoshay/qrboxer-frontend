@@ -28,6 +28,7 @@ function Move({ createbox }) {
       <h4>Destination: {move.location}</h4>
       <p>Move Date: {move.date}</p>
       <CreateaBox move={id} createbox={createbox} />
+      <br></br>
       <BoxCardList id={id} location={move.location} date={move.date} />
     </div>
   );
