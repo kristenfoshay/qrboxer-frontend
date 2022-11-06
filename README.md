@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://live.staticflickr.com/65535/52344856137_c0abc9e2c3_k.jpg" alt="QRBoxer">
+    <img src="./QRBoxer.jpg" alt="QRBoxer">
  
 </div>
 
