@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./QRBoxer.jpg" alt="QRBoxer">
+    <img src="./routes/QRBoxer.jpg" alt="QRBoxer">
  
 </div>
 
