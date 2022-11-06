@@ -1,4 +1,6 @@
-![QRBoxer](QRBoxer.jpg)
+<img alt="QRBoxer" src="https://user-images.githubusercontent.com/88470531/200191542-e1ad20bf-33de-4e86-9106-ebee88872375.jpg" width="450" height=auto>
+
+![QRBoxer](https://user-images.githubusercontent.com/88470531/200191542-e1ad20bf-33de-4e86-9106-ebee88872375.jpg)
 
 ## QR Boxer ##
 
