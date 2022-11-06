@@ -8,18 +8,20 @@ I'm currently designing a RESTful application platform to help users move to a n
 
 ## App Features Include:
 
-    Users can create multiple moves and save them for future reference if needed.
-    Users can create entries for boxes for their move and add items they are putting in each box. 
-    Users can post photos of the items that they have it in each box.
-    Users can print the QR Code for the box they are packing so they can attach it to their box and scan it later to see what's inside!
+    Users can:
+         create multiple moves and save them for future reference if needed.
+         make boxes for their move and add items they are putting in each box. 
+         post photos of the items that they have it in each box.
+         print the QR Code for the box they are packing so they can attach it to their box and scan it later to see what's inside!
+
     Information for each move, box and item is saved for future reference so the user can locate their items later!
     
     
 ## Technology Used:
 
-    React 
-    Node
-    Postgres
+    Node.js
+    Postgresql
+    React
     CSS Bootstrap 
     HTML 
     qrcode.react
