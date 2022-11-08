@@ -1,5 +1,5 @@
 .BoxCard {
-    display: inline-block;
+    display: center;
     max-height: 400px;
     max-width: 300px;
     margin-bottom: 1rem;

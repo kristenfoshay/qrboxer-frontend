@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import QRBoxerApi from "../api/api";
 import ItemListBoxes from "../boxes/ItemListBoxes";
-//import CreateanItem from "../items/CreateanItem";
 import Button from "react-bootstrap/Button";
 import RemoveaBox from "../boxes/RemoveaBox.js";
 import Form from "react-bootstrap/Form";
@@ -80,8 +79,9 @@ function Box({ createitem, removebox }) {
         <Button block="true" size="md" type="submit">Print Box Label</Button>
       </Link>
       <br></br>
-      <Form className="Login" onSubmit={handleSubmit}>
-        <Form.Label>Create a new Item for this Box</Form.Label>
+      <br></br>
+      <Form className="CreateBox" onSubmit={handleSubmit}>
+        <Form.Label><h1>Create a new Item for this Box</h1></Form.Label>
         <br></br>
         <Form.Group size="md" controlId="description">
           <Form.Label>Description</Form.Label>

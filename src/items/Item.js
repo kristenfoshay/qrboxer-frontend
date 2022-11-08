@@ -26,16 +26,17 @@ function Item({ removeitem }) {
       <RemoveanItem id={id} removeitem={removeitem} />
       <br></br>
       <br></br>
-      <h6 className="card-description">{item.description}</h6>
+      <h1 className="card-description">{item.description}</h1>
+      <br></br>
       <div style={{ height: 'content-fit', width: 'content-fit', marginLeft: '250px' }}>
         <div style={{
+          display: "center",
           height: 200, width: 200, marginLeft: '16px',
           backgroundImage: `url(${item.image})`,
           backgroundSize: '100% 100%',
-          objectFit: 'fill'
-
+          objectFit: 'fill',
+          borderRadius: '6px 6px 6px 6px'
         }}></div>
-
         <br></br>
         <Boxid box={item.box} />
       </div>

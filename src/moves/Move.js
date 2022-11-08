@@ -27,7 +27,7 @@ function Move({ createbox }) {
     <div className="Move col-md-8 offset-md-2">
       <h4>Destination: {move.location}</h4>
       <p>Move Date: {move.date}</p>
-      <CreateaBox move={id} createbox={createbox} />
+      <CreateaBox move={parseInt(id)} createbox={createbox} />
       <br></br>
       <BoxCardList id={id} location={move.location} date={move.date} />
     </div>
